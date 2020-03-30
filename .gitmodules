@@ -7,3 +7,6 @@
 [submodule "ConsumerService"]
 	path = ConsumerService
 	url = https://github.com/piolAtif/ConsumerService.git
+[submodule "KitchenService"]
+	path = KitchenService
+	url = https://github.com/piolAtif/KitchenService.git
