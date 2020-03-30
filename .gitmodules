@@ -1,9 +1,9 @@
 [submodule "OrderService"]
 	path = OrderService
 	url = https://github.com/piolAtif/OrderService.git
-[submodule "ConsumerService"]
-	path = ConsumerService
-	url = https://github.com/piolAtif/ConsumerService.git
 [submodule "RestaurantService"]
 	path = RestaurantService
 	url = https://github.com/piolAtif/RestaurantService.git
+[submodule "ConsumerService"]
+	path = ConsumerService
+	url = https://github.com/piolAtif/ConsumerService.git
