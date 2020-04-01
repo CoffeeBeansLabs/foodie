@@ -4,27 +4,27 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Embeddable;
 
-@Embeddable
-@Access(AccessType.FIELD)
+//@Embeddable
+//@Access(AccessType.FIELD)
 public class MenuItem {
 
-    private String id;
+    private int id;
     private String name;
-    private Money price;
+    private Double price;
 
-    private MenuItem() {}
+    private MenuItem() {};
 
-    public MenuItem(String id, String name, Money price) {
+    public MenuItem(int id, String name, Double price) {
         this.id = id;
         this.name = name;
         this.price = price;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -36,11 +36,11 @@ public class MenuItem {
         this.name = name;
     }
 
-    public Money getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(Money price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 }

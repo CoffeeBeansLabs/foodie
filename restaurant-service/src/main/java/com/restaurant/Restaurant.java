@@ -1,33 +1,40 @@
 package com.restaurant;
 
 import javax.persistence.*;
-import java.util.List;
 
-
-@Entity
-@Table(name = "restaurant_order_service_restaurants")
-@Access(AccessType.FIELD)
+//@Table(name = "restaurants")
+//@Access(AccessType.FIELD)
 public class Restaurant {
-
     @Id
     @GeneratedValue
     private Long id;
 
-    @Embedded
-    @ElementCollection
-    @CollectionTable(name = "restaurant_order_service_restaurant_menu_items")
-    private List<MenuItem> menuItems;
+    private String name;
 
-    public Restaurant() {
+    @Embedded
+    private Menu menu;
+
+    private Restaurant() {
     }
 
-    public Restaurant(long id, List<MenuItem> menuItems) {
-        this.id = id;
-        this.menuItems = menuItems;
+    public Restaurant(String name, Menu menu) {
+        this.name = name;
+        this.menu = menu;
     }
 
     public Long getId() {
         return id;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

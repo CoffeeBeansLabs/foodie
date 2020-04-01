@@ -7,7 +7,7 @@ public class Menu {
     @ElementCollection
     private List<MenuItem> menuItems;
 
-    private Menu() {}
+    public Menu() {}
 
     public List<MenuItem> getMenuItems() {
         return menuItems;

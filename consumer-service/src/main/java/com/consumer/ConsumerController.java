@@ -18,6 +18,7 @@ public class ConsumerController {
 
     @RequestMapping(method= RequestMethod.POST)
     public CreateConsumerResponse create(@RequestBody CreateConsumerRequest request) {
+
 //        ResultWithEvents<Consumer> result = consumerService.create(request.getName());
         return new CreateConsumerResponse(1);
 
