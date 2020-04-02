@@ -16,19 +16,19 @@ public class RestaurantController {
     @Autowired
     private RestaurantDAO restaurantDAO;
 
-    @GetMapping(path="/", produces = "application/json")
+    @GetMapping
     public RestaurantList getAllRestaurants()
     {
         return restaurantDAO.getAllRestaurants();
     }
 
-//    @PostMapping(path= "/", consumes = "application/json", produces = "application/json")
-//    public ResponseEntity<Object> addEmployee(@RequestBody Restaurant restaurant)
-//    {
-//        Integer id = employeeDao.getAllEmployees().getEmployeeList().size() + 1;
-//        employee.setId(id);
-//
-//        employeeDao.addEmployee(employee);
-//        return ResponseEntity.created(location).build();
-//    }
+    @PostMapping
+    public RestaurantList createRestaurant(@RequestBody Restaurant restaurant)
+    {
+//        Integer id = restaurantDAO.getAllEmployees().getEmployeeList().size() + 1;
+//        restaurant.setId(id);
+
+        restaurantDAO.addRestaurant(restaurant);
+        return restaurantDAO.getAllRestaurants();
+    }
 }

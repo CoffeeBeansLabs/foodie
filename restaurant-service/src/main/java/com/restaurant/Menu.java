@@ -1,13 +1,14 @@
 package com.restaurant;
 
 import javax.persistence.ElementCollection;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Menu {
-    @ElementCollection
+//    @ElementCollection
     private List<MenuItem> menuItems;
 
-    public Menu() {}
+    public Menu() { this.menuItems =  new ArrayList<>();}
 
     public List<MenuItem> getMenuItems() {
         return menuItems;
@@ -18,7 +19,9 @@ public class Menu {
     }
 
     public Menu(List<MenuItem> menuItems) {
+        if(menuItems == null) {
+            menuItems = new ArrayList<>();
+        }
         this.menuItems = menuItems;
     }
-
 }
